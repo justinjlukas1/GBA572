@@ -1,22 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
 <body>
     <style>
+    div.container {
+      width: 80%;
+      float: right;
+
+    }
+
+    /* Style page content */
+    .main {
+        margin-left: 270px; /* Same as the width of the sidebar */
+        padding: 10px 10px;
+    }
+
     /* The sidebar menu */
+    header, footer {
+        padding: 1em;
+        /*position fixed*/
+        color: white;
+        background-color: #CBC7C6;
+        clear: left;
+        text-align: center;
+    }
+
+    article { /*filled website*/
+      padding: 1em;
+      overflow: hidden;
+    }
 
     .user-info {
         height: 100px;
     }
 
-        .sidenav {
-            height: 100%; /* Full-height: remove this if you want "auto" height */
-            width: 260px; /* Set the width of the sidebar */
-            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-            background-color: #404040; /* Dim gray */
-            z-index: 1; /* Stay on top */
-            top: 0; /* Stay at the top */
-            left: 0;
-            overflow-x: hidden; /* Disable horizontal scroll */
-            padding-top: 20px;
-        }
+  /*styles the sidenav*/
+    .sidenav {
+        float: left;
+        height: 100%; /* Full-height: remove this if you want "auto" height */
+        width: 20%; /* Set the width of the sidebar */
+        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        background-color: #CBC7C6; /* Dim gray */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 20px;  /*padding: 1em; */
+    }
 
         /* The navigation menu links */
         .sidenav button {
@@ -35,12 +65,19 @@
 
         /* When you mouse over the navigation links, change their color */
         .sidenav button:hover {
-            color: #f1f1f1;
+            background-color: #f1f1f1;
         }
 
         .sidenav button.active {
             background-color: #696969; /* Dim gray */
             color: #f1f1f1;
+        }
+
+        .sidenavContent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
         }
 
         button.active .selected {
@@ -66,21 +103,12 @@
             border-top-width: 2px;
         }
 
-        /* Style page content */
-        .main {
-            margin-left: 160px; /* Same as the width of the sidebar */
-            padding: 0px 10px;
-        }
-
         /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
         @media screen and (max-height: 450px) {
             .sidenav {padding-top: 15px;}
             .sidenav a {font-size: 18px;}
         }
     </style>
-
-
-
 
     <div class="sidenav">
         <div class="user-info">User Information Here</div>
@@ -94,8 +122,21 @@
         <button>User Management</button>
     </div>
 
-<!-- Page content -->
-    <div id="main">
-  ...
+    <div class="container">
+      <header>
+        <h1>NetScout VMSPortal</h1>
+      </header>
+
+      <article>
+        <h1>Information</h1>
+          <p>This is where we could display tables or other info.</p>
+      </article>
+      <footer>Copyright &copy; NetScout</footer>
     </div>
+
+<!-- Page content -->
+    <!-- <div id="main">
+      /*eventually could add NetScout logo*/
+    </div> -->
 </body>
+</html>
