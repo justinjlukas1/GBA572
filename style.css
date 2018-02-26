@@ -6,7 +6,6 @@ body {
 .container {
     /* margin-left: 270px; /* Same as the width of the sidebar */ */
     /* padding: 10px 10px; */
-    /* display: inline-block; */
 }
 
 /* The sidebar menu */
@@ -27,6 +26,8 @@ header, footer {
 }
 
 header {
+    display: inline-block;
+    top: 0;
     /* height: 10%; */
 }
 
