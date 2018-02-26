@@ -15,24 +15,20 @@ header, footer {
   background-color: #CBC7C6;
   clear: left;
   text-align: center;
-  position: fixed;
+  /* position: relative;  was absolute*/
   width: 100%;
+  /* position: fixed; */
 }
 
 .sticky-header {
   padding: 10px 16px;
-  /* background: #555; */
-  /* color: #f1f1f1; */
-}
-
-header {
-    display: inline-block;
-    top: 0;
-    /* height: 10%; */
+  top: 0;
+  position: relative;
 }
 
 .sticky-footer {
     bottom: 0;
+    position: fixed;
 }
 
 article { /*filled website*/
@@ -55,7 +51,7 @@ article { /*filled website*/
   top: 0; /* Stay at the top */
   left: 0;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;  /*padding: 1em; */
+  /* padding-top: 20px;  /*padding: 1em; */ */
 }
 
 /* The navigation menu links */
@@ -132,7 +128,6 @@ button:first-child {
   width: 87%;
   float: right;
   left: 0;
-  margin-top: 10%;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
