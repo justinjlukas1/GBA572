@@ -12,7 +12,7 @@ body {
 
 /* The sidebar menu */
 header, footer {
-  padding: 1em; */
+  padding: 1em;
   color: white;
   background-color: #CBC7C6;
   clear: left;
@@ -127,7 +127,7 @@ button:first-child {
   grid-template-rows: auto auto auto;
   background-color: #2196F3;
   /* padding: 10px; */
-  width: 87%;
+  width: 100%;
   float: right;
   left: 0;
 }
