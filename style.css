@@ -1,9 +1,11 @@
 body {
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Style page content */
 .container {
+
     /* margin-left: 270px; /* Same as the width of the sidebar */ */
     /* padding: 10px 10px; */
 }
@@ -17,13 +19,13 @@ header, footer {
   text-align: center;
   /* position: relative;  was absolute*/
   width: 100%;
-  /* position: fixed; */
+  position: fixed;
 }
 
-.sticky-header {
+sticky-header {
   padding: 10px 16px;
   top: 0;
-  position: relative;
+  /* position: relative; */
 }
 
 .sticky-footer {
