@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $ini_array = parse_ini_file("config.ini");
 
@@ -12,10 +12,15 @@ $query = "SELECT * FROM vms_inventory.asn_server_site";
 $myArray = array();
 if ($result = $mysqli->query($query)) {
 
-    while($row = $result->fetch_array(MYSQL_ASSOC)) {
-            $myArray[] = $row;
-    }
-    echo json_encode($myArray);
+  $rows = array();
+     while($r = mysql_fetch_assoc($result)) {
+       $rows['object_name'][] = $r;
+     }
+
+   print json_encode($rows);
+
+echo json_encode($rows);
+    //echo json_encode($myArray);
 }
 
 $result->close();
