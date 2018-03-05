@@ -1,8 +1,13 @@
 /* Style page content */
 .container {
 
-    /* margin-left: 270px; /* Same as the width of the sidebar */ */
+    margin-left: 270px; /* Same as the width of the sidebar */
     /* padding: 10px 10px; */
+    /* float: right; */
+    float: right;
+    z-index: -1;
+    width: 87%;
+
 }
 
 /* The sidebar menu */
@@ -10,42 +15,30 @@ header, footer {
   padding: 1em;
   color: white;
   background-color: #CBC7C6;
-  clear: left;
   text-align: center;
   /* position: relative;  was absolute*/
-  width: 100%;
   position: fixed;
+  width: 87%;
+  right: 0;
+  z-index: 1;
 }
 
-.sticky-header {
-  top: 0;
-  position: fixed;
-  /* position: relative; */
-}
+.sticky-header { top: 0; }
 
-.sticky-footer {
-    bottom: 0;
-    position: fixed;
-}
-
-article { /*filled website*/
-  padding: 1em;
-  overflow: hidden;
-}
+.sticky-footer { bottom: 0; }
 
 .user-info {
-  height: 100px;
+  height: 112px;
 }
 
 /*styles the sidenav*/
 .sidenav {
   float: top;
-  flex: 25%;
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 13%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   background-color: #CBC7C6; /* Dim gray */
-  z-index: 1; /* Stay on top */
+  z-index: 2; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   overflow-x: hidden; /* Disable horizontal scroll */
@@ -125,7 +118,7 @@ button:first-child {
   /* padding: 10px; */
   width: 100%;
   float: right;
-  left: 0;
+  right: 0;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -135,113 +128,7 @@ button:first-child {
   text-align: center;
 }
 
-.item1 {
-  grid-column: 1 / span 2;
-  grid-row: 1;
-}
-.item2 {
-  grid-column: 3;
-  grid-row: 1 / span 2;
-}
-.item5 {
-  grid-column: 1 / span 3;
-  grid-row: 3;
-}
-
 body {
     margin: 0px;
     padding: 0px;
-}
-
-.flexBox {
-    display: flex;
-    /* other stuff */
-}
-/* Flex Container */
-.flex-container {
-  flex: 75%;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: DodgerBlue;
-}
-
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-
-/*styles the sidenav*/
-.sidenav {
-  float: top;
-  flex: 25%;
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 13%; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  background-color: #CBC7C6; /* Dim gray */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-}
-
-/* The navigation menu links */
-.sidenav button {
-  padding: 16px 0px 16px 0px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  width: 100%;
-  background-color: inherit;
-  cursor: pointer;
-  font-size: 16px;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav button:hover {
-  background-color: #f1f1f1;
-}
-/* .sticky-header + .grid-container {
-  padding-top: 102px;
-} */
-
-.sidenav button.active {
-  background-color: #696969; /* Dim gray */
-  color: #f1f1f1;
-}
-
-.sidenavContent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-button.active .selected {
-  display: inline-block;
-  float: right;
-  /* position: absolute; */
-  padding-right: 0;
-  right: 0;
-  top: 8px;
-  background: 0 0;
-  width: 0;
-  height: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-right: 12px solid #fff;
-}
-
-button:last-child {
-  border-bottom-width: 2px;
-}
-
-button:first-child {
-  border-top-width: 2px;
 }
