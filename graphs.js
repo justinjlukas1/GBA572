@@ -98,3 +98,19 @@ function drawRegionsMap() {
 
   chart.draw(data, options);
 }
+
+function drawUser() {
+  var jsonData = $.ajax({
+      url: "getData.php",
+      dataType: "json",
+      async: false
+      }).responseText;
+
+  // Create our data table out of JSON data loaded from server.
+  var data = new google.visualization.DataTable(jsonData);
+
+  // Instantiate and draw our table, passing in some options.
+  var table = new google.visualization.Table(document.getElementById('table_div'));
+  table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
+
+}
