@@ -23,9 +23,32 @@ header, footer {
   z-index: 1;
 }
 
-.sticky-header { top: 0; }
+.sticky-header {
+  top: 0;
+  padding: 1em;
+  color: white;
+  background-color: #CBC7C6;
+  text-align: center;
+  /* position: relative;  was absolute*/
+  position: fixed;
+  width: 87%;
+  right: 0;
+  z-index: 1;
 
-.sticky-footer { bottom: 0; }
+}
+
+.sticky-footer {
+  bottom: 0;
+  padding: 1em;
+  color: white;
+  background-color: #CBC7C6;
+  text-align: center;
+  /* position: relative;  was absolute*/
+  position: fixed;
+  width: 87%;
+  right: 0;
+  z-index: 1;
+}
 
 .user-info {
   height: 112px;
