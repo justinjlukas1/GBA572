@@ -1,3 +1,16 @@
+Website layout:
+    Body
+      sidenav
+        user-Information
+        buttons
+      header
+      container
+        grid container / flexbox container
+        charts
+      footer
+
+
+
 Responsive grid design:
 https://www.w3schools.com/w3css/w3css_grid.asp
 https://www.w3schools.com/css/css_rwd_grid.asp
