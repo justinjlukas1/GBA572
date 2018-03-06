@@ -1,112 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-/*styles the sidenav*/
-.sidenav {
-  float: top;
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 13%; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  background-color: #CBC7C6; /* Dim gray */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  /* padding-top: 20px;  /*padding: 1em; */ */
-}
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="graphs.js"></script>
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-/* The navigation menu links */
-.sidenav button {
-  padding: 16px 0px 16px 0px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  width: 100%;
-  background-color: inherit;
-  cursor: pointer;
-  font-size: 16px;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
+  <script type="text/javascript">
+    // // Load the Visualization API and the controls package.
+     google.charts.load('current', {'packages':['corechart', 'controls']});
+    // // Set a callback to run when the Google Visualization API is loaded.
+     google.charts.setOnLoadCallback(drawDashboard);
+  </script>
 
-/* When you mouse over the navigation links, change their color */
-.sidenav button:hover {
-  background-color: #f1f1f1;
-}
-/* .sticky-header + .grid-container {
-  padding-top: 102px;
-} */
+  <script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+  </script>
 
-.sidenav button.active {
-  background-color: #696969; /* Dim gray */
-  color: #f1f1f1;
-}
+<script type = "text/javascript">
+  google.charts.load('current', {'packages':['geochart'], 'mapsApiKey': 'AIzaSyAs3N0c3xanGUN0DNmzgCDoExtpLi-6GaM'});
+  google.charts.setOnLoadCallback(drawRegionsMap);
+</script>
 
-.sidenavContent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
+<!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+  // Load the Visualization API and the table package.
+  google.charts.load('current', {'packages':['table']});
+  // Set a callback to run when the Google Visualization API is loaded.
+  google.charts.setOnLoadCallback(drawUser);
+</script>
 
-button.active .selected {
-  display: inline-block;
-  float: right;
-  /* position: absolute; */
-  padding-right: 0;
-  right: 0;
-  top: 8px;
-  background: 0 0;
-  width: 0;
-  height: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-right: 12px solid #fff;
-}
-
-button:last-child {
-  border-bottom-width: 2px;
-}
-
-button:first-child {
-  border-top-width: 2px;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: DodgerBlue;
-}
-
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-</style>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+</script>
 </head>
-<body>
-
-<div class="flex-container">
-  <div>1
-    </div>
-  <div>
-    <div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
-  <div>3</div>
-</div>
-
-<p>A container with the flex-direction property set to <em>column</em> will display its items from top to bottom.</p>
-
-</body>
+    <!-- <div class="container"> -->
+    <!-- <body onload="startTime()">> -->
+    <body>
+        <div class="sidenav">
+            <div class="user-info">User Information Here</div>
+            <button class="menu-opt active">Dashboard
+                <span class="selected"></span>
+            </button>
+            <a href="service.html"><button class="menu-opt ative">Service Request Management</button></a>
+            <a href="license.html"><button>License Management</button></a>
+            <a href="inventory.html"><button>Inventory Management</button></a>
+            <a href="user.html"><button>User Management</button></a>
+        </div>
+        <header class = 'sticky-header'><h1>NetScout VMSPortal</h1></header>
+        <div class="flex-container">
+            <div id="piechart"></div>
+            <div id="dashboard_div">
+              <!--Divs that will hold each control and chart-->
+              <div id="filter_div"></div>
+              <div id="chart_div"></div>
+            </div>
+            <div id="regions_div" style="width: 900px; height: 500px;"></div>
+            <!-- <div id="chart_lines" style="width: 900px; height: 500px;"></div> -->
+        </div>
+    <!-- Page content -->
+        <!-- <div id="main">
+          /*eventually could add NetScout logo*/
+        </div> -->
+    <!-- </body> -->
+    <footer class="sticky-footer">Copyright &copy; NetScout</footer>
+  </body>
+<!-- </div> -->
 </html>

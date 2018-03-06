@@ -2,13 +2,38 @@
 .container {
 
     margin-left: 270px; /* Same as the width of the sidebar */
-    /* padding: 10px 10px; */
-    /* float: right; */
+    margin-top: 112px;
     float: right;
     z-index: -1;
     width: 87%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    /* flex-wrap: wrap; */
+    flex-flow: row wrap;
+    /* aligh-content: stretch; */
+    margin-left: 270px; /* Same as the width of the sidebar */
+    margin-top: 112px;
+    margin-bottom: 65px;
+    float: right;
+    z-index: -1;
+    width: 87%;
+    /* height: 75%; */
 
 }
+
+.flex-container > div {
+  background-color: white;
+  width: auto;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
 
 /* The sidebar menu */
 header, footer {
