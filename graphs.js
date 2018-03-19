@@ -127,7 +127,7 @@ function drawUser() {
 }
 
 
-function drawChart() {
+function drawLineChart() {
         var data = new google.visualization.DataTable();
         data.addColumn('number', 'x');
         data.addColumn('number', 'values');

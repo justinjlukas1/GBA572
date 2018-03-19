@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--Load the AJAX API-->
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
@@ -11,33 +11,27 @@
       // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawUser);
     </script>
+
 </head>
+
 <body>
-    <div class="flexBox">
-      <header class="sticky-header">User Information</header>
-
-    <div class="sidenav">
-        <div class="user-info">User Information Here</div>
-        <a href="sidebar.html"><button class="menu-opt active">Dashboard</button></a>
-        <a href="service.html"><button>Service Request Management</button></a>
-        <a href="license.html"><button>License Management</button></a>
-        <a href="inventory.html"><button>Inventory Management</button></a>
-        <button class="menu-opt active">User Management
-            <span class="selected">
-            </span>
-        </button>
-    </div>
-
-    <div class="flex-container">
-      <!--Div that will hold the table-->
-      <div id='table_div'></div>
+  <div class="sidenav">
+      <div class="user-info">User Information Here</div>
+      <a href="sidebar.html"><button>Dashboard</button></a>
+      <a href="service.html"><button>Service Request Management</button></a>
+      <a href="license.html"><button>License Management</button></a>
+      <a href="inventory.html"><button>Inventory Management</button></a>
+      <button class="menu-opt active">User Management
+          <span class="selected">
+          </span>
+      </button>
+  </div>
+    <header class = 'sticky-header'><h1>User Information</h1></header>
+    <div class="container">
+      <div class="grid-container">
+        <div id='table_div'></div>
+      </div>
     </div>
     <footer class="sticky-footer">Copyright &copy; NetScout</footer>
-  </div>
-
-<!-- Page content -->
-    <!-- <div id="main">
-      /*eventually could add NetScout logo*/
-    </div> -->
 </body>
 </html>
