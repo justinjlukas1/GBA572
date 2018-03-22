@@ -33,7 +33,10 @@
   // Set a callback to run when the Google Visualization API is loaded.
   google.charts.setOnLoadCallback(drawUser);
 </script>
-
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['bar']});
+  google.charts.setOnLoadCallback(drawBarChart);
+</script>
 </head>
     <!-- <div class="container"> -->
     <!-- <body onload="startTime()">> -->
@@ -57,7 +60,7 @@
               <div id="chart_div"></div>
             </div>
             <div id="regions_div" style="width: 900px; height: 500px;"></div>
-            <!-- <div id="chart_lines" style="width: 900px; height: 500px;"></div> -->
+            <div id="barchart_material" style="width: 900px; height: 500px;"></div>
         </div>
     <!-- Page content -->
         <!-- <div id="main">
@@ -65,6 +68,5 @@
         </div> -->
     <!-- </body> -->
     <footer class="sticky-footer">Copyright &copy; NetScout</footer>
-    </body>
-    <!-- </div> -->
-    </html>
+  </body>
+</html>
