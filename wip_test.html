@@ -16,7 +16,7 @@
 
         // Pull in data from the selected file
         var jsonData = $.ajax({
-            url: "working_wip_query.php",
+            url: "working_wip_query2.php",
             dataType: "json",
             async: false
         }).responseText;
@@ -28,6 +28,7 @@
             chart: {
             title: 'WIP',
             subtitle: 'Currently only global, regions coming pending finding regions',
+            isStacked: true,
             },
             bars: 'vertical' // Required for Material Bar Charts.
         };
