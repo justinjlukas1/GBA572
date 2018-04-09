@@ -142,6 +142,39 @@ function countVMSDataRequest() {
 
 }
 
+function countInstallRequest() {
+  int count = $.ajax({
+      url: "countInstall.php",
+      dataType: "int",
+      async: false
+      }).responseText;
+
+  // Create our data table out of JSON data loaded from server.
+  var data = new google.visualization.DataTable(jsonData);
+
+  // Instantiate and draw our table, passing in some options.
+  var table = new google.visualization.Table(document.getElementById('table_div'));
+  table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
+
+}
+
+function countUpgradeRequest() {
+  int count = $.ajax({
+      url: "countUpgrade.php",
+      dataType: "int",
+      async: false
+      }).responseText;
+
+  // Create our data table out of JSON data loaded from server.
+  var data = new google.visualization.DataTable(jsonData);
+
+  // Instantiate and draw our table, passing in some options.
+  var table = new google.visualization.Table(document.getElementById('table_div'));
+  table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
+
+}
+
+
 function drawLineChart() {
   var data = new google.visualization.DataTable();
   data.addColumn('number', 'x');
