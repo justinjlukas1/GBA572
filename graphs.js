@@ -126,6 +126,7 @@ function drawUser() {
 
 }
 
+/*
 function countVMSDataRequest() {
   int count = $.ajax({
       url: "vmsDataRequest.php",
@@ -173,7 +174,7 @@ function countUpgradeRequest() {
   table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
 
 }
-
+*/
 
 function drawLineChart() {
   var data = new google.visualization.DataTable();
