@@ -5,13 +5,12 @@
     margin-top: 112px;
     float: right;
     z-index: -1;
-    background-color: grey;
     /* width: 87%; */
 }
 
 .flex-container {
     display: flex;
-    background-color: blue;
+    /* background-color: #2eb82e; */
     /* justify-content: center; */
     align-content: stretch;
     /* flex-wrap: wrap; */
@@ -23,6 +22,7 @@
     float: right;
     z-index: -1;
     width: 87%;
+
     /* height: 75%; */
 
 }
@@ -30,11 +30,15 @@
 .flex-container > div {
   flex-grow: 0;
   width: auto;
-  background-color: orange;
+  /* background-color: #2eb82e; */
   margin: 10px;
   /* text-align: center; */
   /* line-height: 75px; */
   font-size: 30px;
+  box-sizing: border-box;
+  border-style: outset;
+  border-width: 4px;
+  border-color: #2eb82e;
 }
 
 
@@ -42,7 +46,7 @@
 header, footer {
   padding: 1em;
   color: white;
-  background-color: #CBC7C6;
+  background-color: #404040;
   text-align: center;
   /* position: relative;  was absolute*/
   position: fixed;
@@ -55,7 +59,7 @@ header, footer {
   top: 0;
   padding: 1em;
   color: white;
-  background-color: #CBC7C6;
+  background-color: #404040;
   text-align: center;
   /* position: relative;  was absolute*/
   position: fixed;
@@ -69,7 +73,7 @@ header, footer {
   bottom: 0;
   padding: 1em;
   color: white;
-  background-color: #CBC7C6;
+  background-color: #404040;
   text-align: center;
   /* position: relative;  was absolute*/
   position: fixed;
@@ -88,12 +92,16 @@ header, footer {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 13%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  background-color: #CBC7C6; /* Dim gray */
+  background-color: #404040; /* Dim gray */
   z-index: 2; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   overflow-x: hidden; /* Disable horizontal scroll */
   /* padding-top: 20px;  /*padding: 1em; */ */
+}
+
+a:link {
+    text-decoration: none;
 }
 
 /* The navigation menu links */
@@ -109,6 +117,7 @@ header, footer {
   font-size: 16px;
   border-left-color: transparent;
   border-right-color: transparent;
+  : none;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -120,7 +129,7 @@ header, footer {
 } */
 
 .sidenav button.active {
-  background-color: #696969; /* Dim gray */
+  background-color: #999999; /* Dim gray */
   color: #f1f1f1;
 }
 
