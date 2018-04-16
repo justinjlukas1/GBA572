@@ -22,6 +22,7 @@ function drawRegionsMap() {
   chart.draw(data, options);
 }
 
+/*
 function drawUser() {
   var jsonData = $.ajax({
       url: "getData.php",
@@ -35,8 +36,8 @@ function drawUser() {
   // Instantiate and draw our table, passing in some options.
   var table = new google.visualization.Table(document.getElementById('table_div'));
   table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
-
 }
+*/
 
 function countVMSDataRequest() {
   var count = $.ajax({
@@ -88,10 +89,9 @@ function drawBarChart() {
   var chart = new google.charts.Bar(document.getElementById('barchart_material'));
 
   chart.draw(data, google.charts.Bar.convertOptions(options));
-  google.visualization.events.addListener(chart, 'select', selectHandler);
+  // google.visualization.events.addListener(chart, 'select', selectHandler);
 
-function selectHandler(e) {
-  alert(getFormattedValue());
-
-}
+  function selectHandler(e) {
+    alert(getFormattedValue());
+  }
 }
