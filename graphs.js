@@ -94,13 +94,11 @@ function drawChart() {
 
 function drawRegionsMap() {
   var data = google.visualization.arrayToDataTable([
-    ['Country', 'Popularity'],
-    ['Germany', 200],
-    ['United States', 300],
-    ['Brazil', 400],
-    ['Canada', 500],
-    ['France', 600],
-    ['RU', 700]
+    ['Country', 'Work Order'],
+    ['021', 4],
+    ['142', 7],
+    ['150', 9],
+    ['002', 9]
   ]);
 
   var options = {};
@@ -125,7 +123,7 @@ function drawUser() {
   table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
 
 }
-
+/*
 function countVMSDataRequest() {
   int count = $.ajax({
       url: "vmsDataRequest.php",
@@ -155,7 +153,7 @@ function countUpgradeRequest() {
 
       return count;
 }
-
+*/
 function drawLineChart() {
   var data = new google.visualization.DataTable();
   data.addColumn('number', 'x');
