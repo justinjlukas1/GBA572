@@ -107,7 +107,7 @@ function drawRegionsMap() {
 
   var options = {
       //need to change region to 'world', using americas country code for testing
-      region: '019',
+      region: 'world',
       displayMode: 'auto',
   };
 
