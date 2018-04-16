@@ -12,23 +12,23 @@
     display: flex;
     /* background-color: #2eb82e; */
     /* justify-content: center; */
-    align-content: stretch;
+    /* align-content: stretch; */
     /* flex-wrap: wrap; */
     flex-flow: row wrap;
     /* aligh-content: stretch; */
     margin-left: 270px; /* Same as the width of the sidebar */
     margin-top: 112px;
     margin-bottom: 65px;
-    float: right;
+    /* float: right; */
     z-index: -1;
-    width: 87%;
+    width: 70%;
 
     /* height: 75%; */
 
 }
 
 .flex-container > div {
-  flex-grow: 0;
+  flex-grow: 1;
   /* width: auto; */
   /* background-color: #2eb82e; */
   margin: 10px;
@@ -190,13 +190,13 @@ button:first-child {
 
 .simple-stat {
     height: 200px;
-    width: 300px;
+    width: 200px;
     background-color: #2eb82e;
     box-sizing: border-box;
     border-style: outset;
     border-width: 4px;
     border-color: #2eb82e;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
 }
 
