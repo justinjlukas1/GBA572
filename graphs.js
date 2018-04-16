@@ -94,14 +94,22 @@ function drawChart() {
 
 function drawRegionsMap() {
   var data = google.visualization.arrayToDataTable([
-    ['Country', 'Work Order'],
-    ['021', 4],
+    ['continent', 'Work Order'],
+    //americas
+    ['019', 4],
+    //asia
     ['142', 7],
+    //europe
     ['150', 9],
+    //africa
     ['002', 9]
   ]);
 
-  var options = {};
+  var options = {
+      //need to change region to 'world', using americas country code for testing
+      region: '019',
+      displayMode: 'auto',
+  };
 
   var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
